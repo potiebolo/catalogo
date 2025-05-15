@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Potiê - Bolo no Pote</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff8f2;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-height: 80px;
+    }
+    .slogan {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #d2691e;
+    }
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d2691e;
+      margin-bottom: 10px;
+    }
+    .section-img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .card img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 999;
+    }
+    .whatsapp-button img {
+      height: 24px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Potiê" />
+    <div class="slogan">Seu lucro no pote começa aqui!</div>
+  </header>
+
+  <section>
+    <h2>Conheça a Potiê</h2>
+    <p>Produzimos bolos no pote com sabores irresistíveis e prontos para revenda. Ideal para quem busca lucrar com um produto de qualidade e alta aceitação no mercado.</p>
+  </section>
+
+  <section>
+    <h2>Sabores disponíveis</h2>
+    <img src="img/sabores.png" alt="Sabores" class="section-img" />
+    <ul>
+      <li>Ninho</li>
+      <li>Choconinho</li>
+      <li>Prestígio</li>
+      <li>Cenoura com chocolate</li>
+      <li>Brigadeiro</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Por que revender Potiê?</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/lucro.png" alt="Alto Lucro">
+        <h3>Alto Lucro</h3>
+        <p>Compre por R$ 8 e revenda por R$ 12.</p>
+      </div>
+      <div class="card">
+        <img src="img/estoque.png" alt="Estoque Inteligente">
+        <h3>Produção sob demanda</h3>
+        <p>Sem estoque parado. Você pede, a gente entrega.</p>
+      </div>
+      <div class="card">
+        <img src="img/clientes.png" alt="Clientes satisfeitos">
+        <h3>Clientes satisfeitos</h3>
+        <p>Sabor aprovado por quem experimenta. A recompra é garantida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Condições para Revenda</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/prazo.png" alt="Prazo de validade">
+        <h3>Validade</h3>
+        <p>Produto com validade de 5 dias, refrigerado.</p>
+      </div>
+      <div class="card">
+        <img src="img/dinheiro.png" alt="Preço de revenda">
+        <h3>Preço de revenda</h3>
+        <p>Venda por R$ 12 e tenha ótima margem.</p>
+      </div>
+      <div class="card">
+        <img src="img/revenda.png" alt="Pedido mínimo">
+        <h3>Pedido mínimo</h3>
+        <p>Apenas 10 unidades por sabor.</p>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/SEUNUMEROAQUI" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+    Fale conosco
+  </a>
+
+  <footer>
+    © 2025 Potiê - Bolo no Pote. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
