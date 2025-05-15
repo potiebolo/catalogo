@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potiê - Bolo no Pote</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -34,10 +34,6 @@
       margin-top: 1rem;
       font-size: 1.3rem;
       font-weight: 500;
-      border-top: 2px dashed #f3c2d1;
-      border-bottom: 2px dashed #f3c2d1;
-      padding: 1rem 0;
-      display: inline-block;
     }
 
     section {
@@ -51,39 +47,40 @@
       margin-bottom: 1rem;
     }
 
-    .sabores {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-    }
+  .sabores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  gap: 2rem;
+}
 
-    .sabor {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+.sabor {
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-    .sabor:hover {
-      transform: translateY(-5px);
-    }
+.sabor:hover {
+  transform: translateY(-5px);
+}
 
-    .sabor img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
+.sabor img {
+  width: 60%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
 
-    .sabor h3 {
-      margin: 0.5rem 0;
-    }
+.sabor h3 {
+  margin: 0.5rem 0;
+}
 
-    .sabor p {
-      padding: 0 1rem 1rem;
-      font-size: 0.95rem;
-    }
+.sabor p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
 
     .beneficios-cards {
       display: grid;
@@ -192,12 +189,49 @@
       margin-bottom: 0.5rem;
     }
 
+    footer {
+      text-align: center;
+      background-color: #ffe6f0;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      z-index: 999;
+      background-color: #25d366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      animation: pulsar 2s infinite;
+    }
+
+    .whatsapp-fixo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .whatsapp-fixo:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulsar {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
     .cta-final {
       background-color: #fff0f5;
       width: 100%;
       text-align: center;
       padding: 3rem 1.5rem;
+      margin-bottom: 3rem;
       border-top: 3px dashed #f3c2d1;
+      border-bottom: 3px dashed #f3c2d1;
       box-sizing: border-box;
     }
 
@@ -228,119 +262,117 @@
     .botao-cta:hover {
       background-color: #e96b8c;
     }
-
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-      z-index: 999;
-      background-color: #25d366;
-      border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-      animation: pulsar 2s infinite;
-    }
-
-    .whatsapp-fixo img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .whatsapp-fixo:hover {
-      transform: scale(1.1);
-    }
-
-    @keyframes pulsar {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
-      }
-      70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
-    }
-
-    footer {
-      text-align: center;
-      background-color: #ffe6f0;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="https://i.imgur.com/sxJWrx8.jpeg" alt="Logo Potiê - Bolo no Pote">
+<header>
+  <div class="logo">
+    <img src="https://i.imgur.com/sxJWrx8.jpeg" alt="Logo Potiê - Bolo no Pote">
+  </div>
+  <div class="slogan">
+    O sabor artesanal que gera resultados para o seu negócio.
+  </div>
+</header>
+
+<section class="quem-somos">
+  <h1>Quem Somos</h1>
+  <p>
+    Na <strong>Potiê</strong>, acreditamos que a verdadeira receita do sucesso está na combinação entre sabor, qualidade e cuidado em cada detalhe.
+    Produzimos bolos no pote artesanais, perfeitos para empresas que desejam oferecer aos seus clientes uma opção irresistível, prática e com alta aceitação no mercado.
+  </p>
+</section>
+
+<section class="organograma-container" aria-label="Missão, Visão e Valores da empresa">
+  <div class="organograma">
+    <div class="card" tabindex="0">
+      <h3>Missão</h3>
+      <p>Oferecer bolos no pote artesanais que encantam pelo sabor, qualidade e praticidade, fortalecendo o sucesso dos nossos parceiros.</p>
     </div>
-    <div class="slogan">
-      O sabor artesanal que gera resultados para o seu negócio.
+    <div class="card" tabindex="0">
+      <h3>Visão</h3>
+      <p>Ser referência nacional em bolos no pote, reconhecidos pela inovação, sustentabilidade e relacionamento próximo com nossos revendedores.</p>
     </div>
-  </header>
-
-  <section class="quem-somos">
-    <h1>Quem Somos</h1>
-    <p>Na <strong>Potiê</strong>, acreditamos que a verdadeira receita do sucesso está na combinação entre sabor, qualidade e cuidado em cada detalhe.
-      Produzimos bolos no pote artesanais, perfeitos para empresas que desejam oferecer aos seus clientes uma opção irresistível, prática e com alta aceitação no mercado.
-    </p>
-  </section>
-
-  <section class="organograma-container" aria-label="Missão, Visão e Valores da empresa">
-    <div class="organograma">
-      <div class="card" tabindex="0">
-        <h3>Missão</h3>
-        <p>Oferecer bolos no pote artesanais que encantam pelo sabor, qualidade e praticidade, fortalecendo o sucesso dos nossos parceiros.</p>
-      </div>
-      <div class="card" tabindex="0">
-        <h3>Visão</h3>
-        <p>Ser referência nacional em bolos no pote, reconhecidos pela inovação, sustentabilidade e relacionamento próximo com nossos revendedores.</p>
-      </div>
-      <div class="card" tabindex="0">
-        <h3>Valores</h3>
-        <p>Compromisso com a qualidade, respeito ao cliente, ética nos negócios e paixão pela gastronomia artesanal.</p>
-      </div>
+    <div class="card" tabindex="0">
+      <h3>Valores</h3>
+      <p>Compromisso com a qualidade, respeito ao cliente, ética nos negócios e paixão pela gastronomia artesanal.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="portfolio">
-    <h2>Portfólio de Sabores</h2>
-    <div class="sabores">
-      <!-- Sabores aqui... (já incluídos na sua versão) -->
+<section class="portfolio">
+  <h2>Portfólio de Sabores</h2>
+  <div class="sabores">
+    <div class="sabor">
+      <img src="https://i.imgur.com/YOe0Ulb.jpeg" alt="Ninho">
+      <h3>Ninho</h3>
+      <p>Massa leve branca com recheio cremoso de leite ninho.</p>
     </div>
-  </section>
-
-  <section class="beneficios">
-    <h2>Benefícios para o Revendedor</h2>
-    <div class="beneficios-cards">
-      <!-- Benefícios aqui... -->
+    <div class="sabor">
+      <img src="https://i.imgur.com/KFJDjmZ.png" alt="Choconinho">
+      <h3>Choconinho</h3>
+      <p>Massa leve de chocolate com recheio cremoso de leite ninho.</p>
     </div>
-  </section>
-
-  <section class="condicoes">
-    <h2>Condições Comerciais</h2>
-    <p class="condicoes-frase"><strong>Revenda com alta margem, sem complicações.</strong></p>
-    <div class="condicoes-cards">
-      <!-- Condições aqui... -->
+    <div class="sabor">
+      <img src="https://i.imgur.com/p98CHgR.png" alt="Prestígio">
+      <h3>Prestígio</h3>
+      <p>Massa leve de chocolate com recheio cremoso de coco seco.</p>
     </div>
-  </section>
+    <div class="sabor">
+      <img src="https://picsum.photos/300/200?random=4" alt="Cenoura com Chocolate">
+      <h3>Cenoura com Chocolate</h3>
+      <p>Massa leve de cenoura com recheio cremoso de brigadeiro.</p>
+    </div>
+    <div class="sabor">
+      <img src="https://i.imgur.com/rkNw3kZ.png" alt="Brigadeiro">
+      <h3>Brigadeiro</h3>
+      <p>Massa leve de chocolate com recheio cremoso de brigadeiro.</p>
+    </div>
+    <div class="sabor">
+      <img src="https://i.imgur.com/B1u4zFs.png" alt="Dois Amores">
+      <h3>Dois Amores</h3>
+      <p>Massa leve branca com camadas e recheio cremoso intercalados entre brigadeiro branco e preto.</p>
+    </div>
+  </div>
+</section>
 
-  <a href="https://wa.me/5512982872680" class="whatsapp-fixo" target="_blank" aria-label="WhatsApp Potiê">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Ícone WhatsApp" />
-  </a>
+<section class="beneficios">
+  <h2>Benefícios para o Revendedor</h2>
+  <div class="beneficios-cards">
+    <div class="card-beneficio">🚀 Alta rotatividade e aceitação comprovada</div>
+    <div class="card-beneficio">🗸 Embalagem prática: Pote de 140ml com tampa e acompanha colherzinha</div>
+    <div class="card-beneficio">💰 Deixe o trabalho com a gente e lucre apenas revendendo</div>
+    <div class="card-beneficio">🍫 Ingredientes selecionados</div>
+    <div class="card-beneficio">⏳ Validade de até 6 dias refrigerado</div>
+    <div class="card-beneficio">⚡ Ideal para sobremesas rápidas e vendas por impulso</div>
+  </div>
+</section>
 
-  <section class="cta-final">
-    <h2>Pronto para adoçar seus lucros?</h2>
-    <p>Faça seu pedido agora e encante seus clientes com os bolos no pote mais irresistíveis do mercado!</p>
-    <a href="https://wa.me/5512982872680" target="_blank" class="botao-cta">Quero Revender!</a>
-  </section>
+<section class="condicoes">
+  <h2>Condições Comerciais</h2>
+  <p class="condicoes-frase"><strong>Revenda com alta margem, sem complicações.</strong></p>
+  <div class="condicoes-cards">
+    <div class="card"><span>💸</span><p><strong>Preço unitário:</strong><br>R$6,00</p></div>
+    <div class="card"><span>📈</span><p><strong>Revenda sugerida:</strong><br>R$ 9,00</p></div>
+    <div class="card"><span>🍰</span><p><strong>Pedido mínimo:</strong><br>25 bolos no pote (sabores sortidos)</p></div>
+    <div class="card"><span>🚚</span><p><strong>Entrega:</strong><br>Consulte taxa e disponibilidade</p></div>
+    <div class="card"><span>🔐</span><p><strong>Pagamento:</strong><br>Antecipado via Pix</p></div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Potiê - Bolo no Pote. Todos os direitos reservados.
-  </footer>
+<a href="https://wa.me/5512982872680" class="whatsapp-fixo" target="_blank" aria-label="WhatsApp Potiê">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Ícone WhatsApp" />
+</a>
+
+<section class="cta-final">
+  <h2>Pronto para adoçar seus lucros?</h2>
+  <p>Faça seu pedido agora e encante seus clientes com os bolos no pote mais irresistíveis do mercado!</p>
+  <a href="https://wa.me/5512982872680" target="_blank" class="botao-cta">Quero Revender!</a>
+</section>
+
+<footer>
+  &copy; 2025 Potiê - Bolo no Pote. Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
