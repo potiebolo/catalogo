@@ -266,6 +266,14 @@
       background-color: #e96b8c;
     }
     @media (max-width: 768px) {
+  .condicoes-cards {
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas no mobile */
+  }
+  .condicoes-cards .card:last-child {
+    grid-column: 1 / -1; /* Faz o card ocupar do início ao final da linha */
+    justify-self: center; /* Centraliza o card nessa linha */
+  }
+    @media (max-width: 768px) {
   .organograma {
     justify-content: center !important;
     flex-wrap: wrap;
