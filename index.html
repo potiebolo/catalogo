@@ -265,8 +265,13 @@
     .botao-cta:hover {
       background-color: #e96b8c;
     }
-
-    /* 🔥 Responsividade para mobile */
+    @media (max-width: 768px) {
+  .organograma {
+    justify-content: center !important;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+     /* 🔥 Responsividade para mobile */
     @media (max-width: 480px) {
       .sabores {
         grid-template-columns: 1fr;
