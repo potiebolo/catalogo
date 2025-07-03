@@ -284,6 +284,15 @@
       .sabores {
         grid-template-columns: 1fr;
       }
+      @media (max-width: 768px) {
+  .organograma {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .organograma::before {
+    content: none; /* Remove a linha horizontal */
+  }
     }
   </style>
 </head>
