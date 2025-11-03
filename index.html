@@ -49,40 +49,49 @@
       text-align: center;
     }
 
-    .sabores {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
+    /* --- Grade de sabores (ajustada) --- */
+.sabores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
+  gap: 1.5rem;
+  justify-items: center;
+}
 
-    .sabor {
-      background: #fff;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+.sabor {
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
 
-    .sabor:hover {
-      transform: translateY(-5px);
-    }
+.sabor:hover {
+  transform: translateY(-5px);
+}
 
-    .sabor img {
-      width: 70%;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 1rem;
-    }
+.sabor img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
 
-    .sabor h3 {
-      margin: 0.5rem 0;
-    }
+/* --- Responsivo --- */
+@media (max-width: 992px) {
+  .sabores {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+  }
+}
 
-    .sabor p {
-      padding: 0 1rem 1rem;
-      font-size: 0.95rem;
-    }
+@media (max-width: 600px) {
+  .sabores {
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+  }
+}
+
 
     .beneficios-cards {
       display: grid;
